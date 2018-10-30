@@ -1,0 +1,24 @@
+{
+ "manifest_version": 2,
+ "name": "centreze",
+ "description": "Fix a little thingy about centreli mobile: you can't submit a new request in the mobile web version! This just adds a style to the control that allows it to scroll. You have to be logged into the site and on the Submit New Request page for this to have an effect.",
+ "version": "1",
+ "author": "Colin MacAllister",
+
+"applications": {
+  "gecko": {
+    "id": "centreze@probono.net"
+  }
+},
+
+"icons": {
+	"96": "icons/centreli-add.png"
+},
+
+"content_scripts": [
+    {
+      "matches": ["*://centreli.com/*"],
+      "js": ["centreze.js"]
+    }
+  ]
+}
